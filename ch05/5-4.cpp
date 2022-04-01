@@ -22,7 +22,7 @@ int main (int argc, char *argv[])
     int charCounter = 0;
     int i = 0;
     // check for null character
-    while (text[i] != '\0') {
+    while (text[i] != '\0' || i < MAX_INPUT_LENGTH) {
         charCounter++;
         i++;
     }
