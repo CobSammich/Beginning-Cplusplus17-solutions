@@ -1,9 +1,7 @@
 /*
-exercise 6-3. Write a program that reads an array size from the keyboard and
-dynamically allocates an array of that size to hold floating-point values. Using pointer
-notation, initialize all the elements of the array so that the value of the element at
-index position n is 1 / (n + 1)2. Calculate the sum of the elements using array notation,
-multiply the sum by 6, and output the square root of that result.
+exercise 6-4. repeat the calculation in exercise 6-3 but using a vector<> container
+allocated in the free store. test the program with more than 100,000 elements. do you
+notice anything interesting about the result?
 */
 
 #include <iostream>
@@ -30,7 +28,4 @@ int main (int argc, char *argv[]) {
 
     float finalValue = std::pow(sum * 6, 0.5);
     std::cout << "Final Value: " << finalValue << std::endl;
-
-    // free memory on the heap
-    delete[] values;
 }
